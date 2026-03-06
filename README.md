@@ -163,8 +163,8 @@ Create & Save modes supported
 
 ## How to run the application!
 
-**1. Clone the Repository
-```git clone <your-repository-url>
+1. Clone the Repository
+```git clone <https://github.com/John27052001/work-order-schedule-timeline>
 cd work-order-schedule-timeline
 ```
 
