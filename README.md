@@ -159,7 +159,8 @@ npm install
 
 ## Run the Application
 
-``` npm serve
+```
+npm serve
 http://localhost:4300
 ```
 ## Design Implementation
