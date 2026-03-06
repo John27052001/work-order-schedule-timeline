@@ -63,6 +63,7 @@ The application allows planners to:
 
 ## Project Structure
 src/
+
 └── app/
 └── features/
 └── timeline/
