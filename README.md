@@ -170,13 +170,13 @@ cd work-order-schedule-timeline
 
 ## Install Dependencies
 
-``` npm install
+```npm install
 ```
 
 ## Run the Application
 
 ``` npm serve
-http://localhost:4200
+http://localhost:4300
 ```
 ## Design Implementation
 Pixel-aligned layout based on provided Sketch designs
