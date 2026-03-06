@@ -117,17 +117,17 @@ All documents follow the required ERP format:
 ## Features Implemented
 **Timeline Grid**
 
-Fixed left panel for work centers
+•Fixed left panel for work centers
 
-Horizontally scrollable timeline
+•Horizontally scrollable timeline
 
-Day / Week / Month zoom levels
+•Day / Week / Month zoom levels
 
-Dynamic date header
+•Dynamic date header
 
-Current-day vertical indicator
+•Current-day vertical indicator
 
-Hover states for rows
+•Hover states for rows
 
 **Work Order Bars**
 
