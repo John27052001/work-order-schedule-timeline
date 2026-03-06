@@ -1,4 +1,3 @@
- ```
 # 🏭 Work Order Schedule Timeline  
 **Frontend Technical Test – Angular 17**
 
@@ -21,7 +20,7 @@ The application allows planners to:
 
 The implementation follows the required ERP document structure:
 
-```ts
+ts
 {
   docId: string;
   docType: string;
