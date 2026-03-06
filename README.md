@@ -27,9 +27,9 @@ ts
   data: { ... }
 }
 
-How to Run the Application"
+**How to Run the Application:**
 1️⃣ Clone the Repository
-git clone <your-repository-url>
+git clone <(https://github.com/John27052001/work-order-schedule-timeline)>
 cd work-order-timeline
 2️⃣ Install Dependencies
 npm install
@@ -42,21 +42,16 @@ npx ng serve
 
 If port conflict occurs:
 
-npx ng serve --port 4300
+**npx ng serve --port 4300**
 4️⃣ Open in Browser
 http://localhost:4300
 
 
-Project Architecture
-🔹 Angular Version
+**Project Architecture:**
+🔹 Angular Version - Angular 17+
+Standalone Components - Strict TypeScript mode
 
-Angular 17+
-
-Standalone Components
-
-Strict TypeScript mode
-
-🔹 Main Components
+🔹 Main Components:
 1. TimelineComponent
 
 Responsible for:
@@ -87,8 +82,8 @@ Validation rules
 
 Emitting save/close events
 
-Libraries Used
-Library	Purpose
+**Libraries Used:**
+
 Angular 17	Core framework
 Reactive Forms	Form validation & state management
 SCSS	Modular styling
@@ -96,12 +91,12 @@ ng-select	Dropdown component
 @ng-bootstrap/ng-bootstrap	Datepicker component
 Circular Std Font	Pixel-perfect typography
 
-Font included:
+**Font included:**
 
 <link rel="stylesheet" href="https://naologic-com-assets.naologic.com/fonts/circular-std/circular-std.css">
 Data Structure (Required ERP Format)
 
-All documents follow this structure:
+**All documents follow this structure:**
 
 interface WorkCenterDocument {
   docId: string;
@@ -128,7 +123,8 @@ type WorkOrderStatus =
   | 'in-progress'
   | 'complete'
   | 'blocked';
-Core Features Implemented
+
+**Core Features Implemented:**
 ✅ Timeline Grid
 
 Fixed left panel for work centers
@@ -215,7 +211,7 @@ Prevent save
 
 Ensures no two work orders overlap within the same work center.
 
-Key Technical Decisions
+**Key Technical Decisions:**
 
 Used Standalone Components for cleaner architecture
 
@@ -268,32 +264,6 @@ Save changes
 6️⃣ Delete (30 sec)
 
 Delete an order
-
-7️⃣ Code Walkthrough (2–3 min)
-
-Show document structure
-
-Show overlap logic
-
-Show date positioning math
-
-Explain component separation
-
-📦 Public Repository Requirements
-
-Your GitHub repo includes:
-
-Working Angular application
-
-Sample data
-
-Clean commit history
-
-README.md
-
-No console errors
-
-Proper folder structure
 
 ## Suggested Commit History
 Initial timeline grid implementation
