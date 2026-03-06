@@ -1,0 +1,244 @@
+/* ================= PAGE ================= */
+
+.page {
+  padding: 48px;
+  background: linear-gradient(180deg, #f6f8fc 0%, #eef2ff 100%);
+  font-family: "Circular-Std", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #111827;
+}
+
+.timescale {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.timescale select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background: white;
+  font-size: 13px;
+}
+
+/* ================= PRIMARY BUTTON ================= */
+
+.primary-btn {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.3);
+}
+
+/* ================= TIMELINE CONTAINER ================= */
+
+.timeline {
+  display: flex;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+/* ================= LEFT PANEL ================= */
+
+.left-panel {
+  width: 220px;
+  background: #fafafa;
+  border-right: 1px solid #e5e7eb;
+}
+
+.left-header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.row-label {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  border-bottom: 1px solid #f1f5f9;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* ================= RIGHT PANEL ================= */
+
+.right-panel {
+  flex: 1;
+  position: relative;
+  overflow-x: auto;
+}
+
+/* ================= DATE HEADER ================= */
+
+.date-row {
+  display: flex;
+  height: 60px;
+  background: #f9fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.date-cell {
+  min-width: 70px;
+  text-align: center;
+  padding-top: 10px;
+  border-right: 1px solid #f1f5f9;
+}
+
+.month-label {
+  font-size: 10px;
+  color: #9ca3af;
+}
+
+.day-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* ================= GRID ================= */
+
+.grid-row {
+  display: flex;
+  height: 60px; /* keep full grid height */
+  position: relative;
+}
+
+.grid-cell {
+  min-width: 70px;
+  border-right: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* ================= TODAY LINE ================= */
+
+.today-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #6366f1;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* ================= ORDER BARS ================= */
+
+.order-bar {
+  position: absolute;
+  top: 22px;               /* perfectly centered in 60px row */
+  height: 16px;            /* compact but clean */
+  padding: 0 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.order-title {
+  font-size: 11px;
+  color: #111827;
+}
+
+/* ================= STATUS STRIP ================= */
+
+.order-bar::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: 4px 0 0 4px;
+}
+
+.order-bar.open::before {
+  background: #3b82f6;
+}
+
+.order-bar.in-progress::before {
+  background: #6366f1;
+}
+
+.order-bar.complete::before {
+  background: #22c55e;
+}
+
+.order-bar.blocked::before {
+  background: #f59e0b;
+}
+
+/* ================= 3-DOT MENU ================= */
+
+.order-actions {
+  position: relative;
+}
+
+.menu-btn {
+  width: 14px;
+  height: 14px;
+  font-size: 9px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 24px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+.dropdown div {
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.dropdown div:hover {
+  background: #f3f4f6;
+}

@@ -1,0 +1,142 @@
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+
+    <div class="left">
+      <h2>Work Orders</h2>
+
+      <div class="timescale">
+        <span>Timescale</span>
+
+        <select
+          [value]="timeScale"
+          (change)="changeScale($any($event.target).value)">
+
+          <option value="day">Day</option>
+          <option value="week">Week</option>
+          <option value="month">Month</option>
+
+        </select>
+      </div>
+    </div>
+
+    <button class="primary-btn" (click)="openPanel()">
+      Create Order
+    </button>
+
+  </div>
+
+
+  <!-- TIMELINE CONTAINER -->
+  <div class="timeline">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+      <div class="left-header">
+        Work Center
+      </div>
+
+      <div
+        *ngFor="let wc of workCenters; trackBy: trackByWorkCenter"
+        class="row-label">
+        {{ wc.name }}
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel" #timelineContainer>
+      <!-- CURRENT DAY LINE -->
+      <div
+        *ngIf="getTodayPosition() !== null"
+        class="today-line"
+        [style.left.px]="getTodayPosition()">
+      </div>
+
+      <!-- DATE HEADER -->
+      <div class="date-row">
+        <div
+          *ngFor="let d of getDates()"
+          class="date-cell">
+
+          <div class="month-label">
+            {{ d | date:'MMM' }}
+          </div>
+
+          <div class="day-label">
+            {{ d | date:'d' }}
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GRID ROWS -->
+      <div
+        *ngFor="let wc of workCenters; trackBy: trackByWorkCenter"
+        class="grid-row">
+
+        <!-- Background Cells -->
+        <div
+          *ngFor="let d of getDates()"
+          class="grid-cell"
+          (click)="onGridClick(d, wc.id)">
+        </div>
+
+        <!-- Work Order Bars -->
+        <div
+        *ngFor="let order of getOrdersForWorkCenter(wc.id); trackBy: trackByOrder"
+        class="order-bar"
+        [class.active]="activeMenuId === order.id"
+        [ngClass]="order.status"
+        [style.left.px]="getPosition(order.startDate)"
+        [style.width.px]="getWidth(order.startDate, order.endDate)">
+          <span class="order-title">
+            {{ order.name }}
+          </span>
+
+          <div class="order-actions">
+
+            <button
+              class="menu-btn"
+              (click)="toggleMenu(order.id); $event.stopPropagation()">
+              ⋮
+            </button>
+
+            <div
+              class="dropdown"
+              *ngIf="activeMenuId === order.id"
+              (click)="$event.stopPropagation()">
+
+              <div (click)="openEdit(order)">
+                Edit
+              </div>
+
+              <div (click)="deleteOrder(order.id)">
+                Delete
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PANEL -->
+  <app-work-order-panel
+    [visible]="panelVisible"
+    [editData]="editData"
+    (close)="closePanel()"
+    (save)="saveOrder($event)">
+  </app-work-order-panel>
+
+</div>

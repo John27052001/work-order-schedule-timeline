@@ -1,0 +1,73 @@
+<!-- Overlay -->
+<div 
+  class="overlay"
+  *ngIf="visible"
+  (click)="onClose()">
+</div>
+
+<!-- Panel -->
+<div 
+  class="panel"
+  [class.open]="visible">
+
+  <div class="panel-header">
+    <h3>Create Work Order</h3>
+    <button class="close-btn" (click)="onClose()">✕</button>
+  </div>
+
+  <form [formGroup]="form" class="panel-body">
+
+    <div class="form-group">
+      <label>Work Order Name</label>
+      <input formControlName="name" />
+    </div>
+
+    <div class="form-group">
+      <label>Work Center</label>
+      <select formControlName="workCenterId">
+        <option value="wc1">Extrusion Line A</option>
+        <option value="wc2">CNC Machine 1</option>
+        <option value="wc3">Assembly Station</option>
+        <option value="wc4">Quality Control</option>
+        <option value="wc5">Packaging Line</option>
+      </select>
+    </div>
+
+    <div class="date-row">
+      <div class="form-group">
+        <label>Start Date</label>
+        <input type="date" formControlName="startDate" />
+      </div>
+
+      <div class="form-group">
+        <label>End Date</label>
+        <input type="date" formControlName="endDate" />
+      </div>
+    </div>
+
+    <div class="form-group">
+        <label>Status</label>
+      
+        <div class="status-wrapper">
+          <select
+            formControlName="status"
+            [ngClass]="form.get('status')?.value">
+      
+            <option value="open">Open</option>
+            <option value="in-progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="blocked">Blocked</option>
+      
+          </select>
+        </div>
+      
+      </div>
+
+    <div class="panel-actions">
+      <button type="button" class="secondary-btn" (click)="onClose()">Cancel</button>
+      <button type="button" class="primary-btn" (click)="onSave()">Save</button>
+    </div>
+
+  </form>
+
+</div>
