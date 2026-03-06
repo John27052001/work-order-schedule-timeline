@@ -117,43 +117,43 @@ All documents follow the required ERP format:
 ## Features Implemented
 **Timeline Grid**
 
-•Fixed left panel for work centers
+- Fixed left panel for work centers
 
-•Horizontally scrollable timeline
+- Horizontally scrollable timeline
 
-•Day / Week / Month zoom levels
+- Day / Week / Month zoom levels
 
-•Dynamic date header
+- Dynamic date header
 
-•Current-day vertical indicator
+- Current-day vertical indicator
 
-•Hover states for rows
+- Hover states for rows
 
 **Work Order Bars**
 
-Positioned using date difference calculations
+- Positioned using date difference calculations
 
-Width based on duration
+- Width based on duration
 
-Status-based visual indicators
+- Status-based visual indicators
 
-Three-dot action menu (Edit / Delete)
+- Three-dot action menu (Edit / Delete)
 
-No overlap allowed on same work center
+- No overlap allowed on same work center
 
 **Create / Edit Panel**
 
-Slide-out panel
+- Slide-out panel
 
-Reactive Form implementation
+- Reactive Form implementation
 
-Required field validation
+- Required field validation
 
-Date validation
+- Date validation
 
-Overlap detection logic
+- Overlap detection logic
 
-Create & Save modes supported
+- Create & Save modes supported
 
 ## Overlap Detection
 
@@ -180,15 +180,15 @@ npm install
 http://localhost:4300
 ```
 ## Design Implementation
-Pixel-aligned layout based on provided Sketch designs
+- Pixel-aligned layout based on provided Sketch designs
 
-Circular Std font integrated
+- Circular Std font integrated
 
-Status accent strip styling
+- Status accent strip styling
 
-Clean minimal UI for production ERP feel
+- Clean minimal UI for production ERP feel
 
-Smooth hover interactions
+- Smooth hover interactions
 
 ## Key Implementation Decisions
 1. Standalone Components
