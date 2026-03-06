@@ -161,3 +161,55 @@ Create & Save modes supported
 
 ```newStart <= existingEnd && newEnd >= existingStar```
 
+## How to run the application!
+
+**1. Clone the Repository
+```git clone <your-repository-url>
+cd work-order-schedule-timeline
+```
+
+## Install Dependencies
+
+``` npm install
+```
+
+## Run the Application
+
+``` npm serve
+http://localhost:4200
+```
+## Design Implementation
+Pixel-aligned layout based on provided Sketch designs
+
+Circular Std font integrated
+
+Status accent strip styling
+
+Clean minimal UI for production ERP feel
+
+Smooth hover interactions
+
+## Key Implementation Decisions
+1. Standalone Components
+
+Used Angular 17 standalone architecture for cleaner modular structure.
+
+2. Reactive Forms
+
+Used FormGroup for form validation and better state management.
+
+3. Absolute Positioning for Bars
+
+Bars are positioned using:
+
+```position = (startDate - visibleStart) * columnWidth
+width = (endDate - startDate) * columnWidth
+```
+4. Overlap Prevention
+
+Overlap detection prevents scheduling conflicts within the same work center.
+
+## Author
+
+**Megha John Babu**
+Frontend Technical Test Submission
