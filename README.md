@@ -170,7 +170,8 @@ cd work-order-schedule-timeline
 
 ## Install Dependencies
 
-```npm install
+```
+npm install
 ```
 
 ## Run the Application
@@ -212,4 +213,5 @@ Overlap detection prevents scheduling conflicts within the same work center.
 ## Author
 
 **Megha John Babu**
+
 Frontend Technical Test Submission
