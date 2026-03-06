@@ -75,7 +75,6 @@ src/
 ├── timeline.component.html
 
 ├── timeline.component.scss
-
 └── components/
 
 └── work-order-panel/
