@@ -65,17 +65,26 @@ The application allows planners to:
 src/
 
 └── app/
-└── features/
-└── timeline/
-├── timeline.component.ts
-├── timeline.component.html
-├── timeline.component.scss
-└── components/
-└── work-order-panel/
-├── work-order-panel.ts
-├── work-order-panel.html
-└── work-order-panel.scss
 
+└── features/
+
+└── timeline/
+
+├── timeline.component.ts
+
+├── timeline.component.html
+
+├── timeline.component.scss
+
+└── components/
+
+└── work-order-panel/
+
+├── work-order-panel.ts
+
+├── work-order-panel.html
+
+└── work-order-panel.scss
 
 ---
 
