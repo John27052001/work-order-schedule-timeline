@@ -90,7 +90,74 @@ All documents follow the required ERP format:
 }
 ```
 
-**Work Center Document**
+## Work Center Document
 
+```interface WorkCenterDocument {
+  docId: string;
+  docType: 'workCenter';
+  data: {
+    name: string;
+  };
+}
+```
+## Work Order Document
 
+```interface WorkOrderDocument {
+  docId: string;
+  docType: 'workOrder';
+  data: {
+    name: string;
+    workCenterId: string;
+    status: 'open' | 'in-progress' | 'complete' | 'blocked';
+    startDate: string; // ISO format
+    endDate: string;   // ISO format
+  };
+}
+```
+## Features Implemented
+**Timeline Grid**
+
+Fixed left panel for work centers
+
+Horizontally scrollable timeline
+
+Day / Week / Month zoom levels
+
+Dynamic date header
+
+Current-day vertical indicator
+
+Hover states for rows
+
+**Work Order Bars**
+
+Positioned using date difference calculations
+
+Width based on duration
+
+Status-based visual indicators
+
+Three-dot action menu (Edit / Delete)
+
+No overlap allowed on same work center
+
+**Create / Edit Panel**
+
+Slide-out panel
+
+Reactive Form implementation
+
+Required field validation
+
+Date validation
+
+Overlap detection logic
+
+Create & Save modes supported
+
+## Overlap Detection
+
+**Prevents overlapping work orders on the same work center.**
+
+```newStart <= existingEnd && newEnd >= existingStar```
 
