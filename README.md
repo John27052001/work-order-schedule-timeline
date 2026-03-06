@@ -1,9 +1,9 @@
-# Work Order Schedule Timeline  
+# 🏭 Work Order Schedule Timeline  
 **Frontend Technical Test – Angular 17**
 
 ---
 
-## Overview
+## 📌 Overview
 
 This project is an interactive **Work Order Schedule Timeline** built using **Angular 17 (Standalone Components)** for a manufacturing ERP system.
 
